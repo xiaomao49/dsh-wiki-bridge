@@ -1,0 +1,4 @@
+# dsh-wiki-bridge bundle patch：把插件行挂进 Web profile 的组合。
+- insert:
+    - id: wiki-bridge
+      name: 'dsh-wiki-bridge'
