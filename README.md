@@ -49,6 +49,58 @@ wiki_write           wiki_archive           wiki_check          updated 距今
 - **元文件**：`_约定.md`、`日志.md`、`收件箱/说明.md` 不参与检索
 - 阈值 `decayDays` 可在设置页调整（默认 90 天，最小 7 天）
 
+## 🚀 开箱即用（5 步从零到能用）
+
+### 第 1 步：安装插件
+
+```sh
+dsh plugin --profile web add "github:<你的用户名>/dsh-wiki-bridge#main"
+systemctl --user restart dsh-web
+```
+
+（或本地目录方式，见下方「安装」。）
+
+### 第 2 步：准备 vault 约定
+
+**已有 Obsidian vault**：把 `vault-template/_约定.md` 复制到 vault 根目录。
+
+**全新 vault**：复制整个 `vault-template/` 的三样东西到 vault 根目录，并按需创建目录：
+
+```text
+你的Vault/
+├── _约定.md          ← 从 vault-template/ 复制
+├── 首页.md           ← 从 vault-template/ 复制（分类索引骨架）
+├── 收件箱/           ← 新建空目录
+├── 归档/             ← 新建空目录（遗忘区）
+└── Caelestia/ 系统维护/ 网络/ 应用/ 服务/ 开发/   ← 分类目录（可增删，见模板 README 定制说明）
+```
+
+### 第 3 步：配置 vault 路径
+
+打开 DSH **设置 → WikiBridge**：
+
+1. 点「自动发现」（读取 Obsidian 注册表回填）或手动粘贴 vault 绝对路径
+2. 点「保存」（持久化到 settings.yaml，立即生效）
+
+### 第 4 步：验证
+
+在 DSH 对话中说：
+
+```
+"体检一下知识库"   → wiki_check 返回检查结果（新 vault 应 0 问题）
+```
+
+### 第 5 步：日常使用
+
+```
+"记一下：xxx"           → 沉淀知识进收件箱
+"查一下知识库有没有 xx"   → 检索复用旧结论
+"做周维护/归档收件箱"     → 分类归档 + 登记首页
+"体检一下知识库"         → 规范检查 + 按清单修复
+```
+
+> 对话命中知识库主题词时会自动注入相关笔记摘要（自动词典），无需手动检索。
+
 ## 安装
 
 ### 方式一：本地目录
