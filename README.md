@@ -2,6 +2,12 @@
 
 **WikiBridge**：DeepSeek Harness (DSH) 与 Obsidian vault 的知识库桥接插件 —— 会话中沉淀知识、检索旧结论、自动注入上下文，并把 `_约定.md` 式的归档规范变成可执行的工作流。
 
+> ## 📢 声明（Disclaimer）
+>
+> 本插件**完全由 AI 编程助手（DeepSeek Harness / DSH）在对话会话中自主设计、编码与维护**，仓库持有者仅负责托管与发布，未参与编写。任何代码问题、运行风险或使用后果均与仓库持有者个人无关；请使用者自行评估后使用。
+>
+> This plugin was **entirely designed, coded, and maintained by an AI coding assistant (DeepSeek Harness / DSH)** during chat sessions. The repository owner only hosts and publishes it, and is not the author. The owner assumes no responsibility for any issues, risks, or consequences arising from its use — use at your own discretion.
+
 ## 功能
 
 ### 模型工具（Host）
